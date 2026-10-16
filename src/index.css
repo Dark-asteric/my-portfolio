@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    /* height of your sticky navbar so sections aren't hidden under it */
+}
+
+@keyframes shadowBlink {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(251, 191, 36, 0.9);
+    }
+}
+
+.animate-shadowBlink {
+    animation: shadowBlink 1.5s ease-in-out infinite;
+}
