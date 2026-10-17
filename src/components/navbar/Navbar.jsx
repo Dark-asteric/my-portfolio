@@ -21,15 +21,17 @@ const Navbar = () => {
   const timer = useRef(null)
   const [time, setTime] = useState("")
   const [weather, setWeather] = useState({ temp: null, code: null })
+
   useEffect(() => {
     const updateTime = () => {
       const now = new Date()
-      setTime(now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' , second: '2-digit'}))
+      setTime(now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }))
     }
     updateTime()
     const interval = setInterval(updateTime, 1000)
     return () => clearInterval(interval)
   }, [])
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -47,18 +49,17 @@ const Navbar = () => {
     }
 
     fetchWeather()
-    const weatherInterval = setInterval(fetchWeather, 600000) // Update every 10 min
+    const weatherInterval = setInterval(fetchWeather, 600000)
     return () => clearInterval(weatherInterval)
   }, [])
 
-  // Map WMO weather codes to Lucide icons
   const getWeatherIcon = (code) => {
-    if (code === null) return <Sun size={16} className="text-amber-400" />
-    if (code === 0) return <Sun size={16} className="text-amber-400" />
-    if (code >= 1 && code <= 3) return <Cloud size={16} className="text-amber-200" />
-    if (code >= 51 && code <= 82) return <CloudRain size={16} className="text-sky-300" />
-    if (code >= 85 && code <= 86) return <Snowflake size={16} className="text-blue-200" />
-    return <Cloud size={16} className="text-amber-200" />
+    if (code === null) return <Sun size={14} className="text-amber-400" />
+    if (code === 0) return <Sun size={14} className="text-amber-400" />
+    if (code >= 1 && code <= 3) return <Cloud size={14} className="text-amber-200" />
+    if (code >= 51 && code <= 82) return <CloudRain size={14} className="text-sky-300" />
+    if (code >= 85 && code <= 86) return <Snowflake size={14} className="text-blue-200" />
+    return <Cloud size={14} className="text-amber-200" />
   }
 
   useEffect(() => {
@@ -120,7 +121,8 @@ const Navbar = () => {
   return (
     <header className="w-full sticky top-0 z-50 bg-white/30 backdrop-blur-lg border-b border-white/40 shadow-lg rounded-7xl">
       <div className="flex justify-between items-center mx-auto max-w-6xl px-5 py-3">
-        <div className="flex items-center gap-4 text-xl">
+        {/* Left Side: Logo + Mobile Weather/Time */}
+        <div className="flex items-center gap-3">
           <a
             href="#home"
             onClick={() => handleClick('home')}
@@ -128,6 +130,16 @@ const Navbar = () => {
           >
             <h1 className="text-2xl font-bold text-white"><span className="text-amber-500">~/</span>Shafi</h1>
           </a>
+
+          {/* Mobile Weather & Time Widget (Next to Logo) */}
+          <div className="flex lg:hidden items-center gap-1.5 rounded-full border border-white/20 bg-black/20 px-2.5 py-1 text-[11px] text-white backdrop-blur-md">
+            <span className="font-medium text-amber-400">{CITY_NAME}</span>
+            <span className="text-white/40">•</span>
+            {getWeatherIcon(weather.code)}
+            <span>{weather.temp !== null ? `${weather.temp}°C` : "--°C"}</span>
+            <span className="text-white/40">•</span>
+            <span className="font-mono">{time}</span>
+          </div>
         </div>
 
         {/* Desktop links */}
@@ -164,17 +176,8 @@ const Navbar = () => {
       {/* Mobile Drawer */}
       {open && (
         <ul className="md:hidden flex flex-col gap-4 px-5 pb-5 text-xl border-t border-white/40">
-          {/* Mobile Weather & Time display */}
-          <li className="pt-3 flex items-center gap-2 text-sm text-amber-400">
-            <span className="font-semibold">{CITY_NAME}</span>
-            <span className="text-white/40">•</span>
-            {getWeatherIcon(weather.code)}
-            <span>{weather.temp !== null ? `${weather.temp}°C` : "--°C"}</span>
-            <span className="text-white/40">•</span>
-            <span className="font-mono text-white">{time}</span>
-          </li>
           {links.map(({ id, label }) => (
-            <li key={id}>
+            <li key={id} className="pt-2">
               <a
                 href={`#${id}`}
                 onClick={() => handleClick(id)}
