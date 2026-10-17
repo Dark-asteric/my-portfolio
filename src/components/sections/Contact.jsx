@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Mail, MessageSquare, Send, User } from "lucide-react"
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 AOS.init();
 
 const EMAIL = "mishafi6969@gmail.com"
