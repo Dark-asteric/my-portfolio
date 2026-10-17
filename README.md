@@ -47,11 +47,18 @@ npm run build
 ## 🛠️ Technologies
 
 - React.js
+<<<<<<< HEAD
 - JavaScript
 - HTML5 & CSS3
 - Tailwind CSS
 - npm
 - AOS (Animate on Scroll)
+=======
+- JavaScript / TypeScript
+- HTML5 & CSS3
+- Tailwind CSS
+- npm
+>>>>>>> 757531673b9d22be0a0cf76419158713d2e96afd
 
 ## 👨‍💻 About Me
 
