@@ -1,4 +1,7 @@
 import { Briefcase, CalendarDays, MapPin } from "lucide-react"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const experience = [
     {
@@ -29,7 +32,9 @@ const experience = [
 
 const Experience = () => {
     return (
-        <section id="experience" className="scroll-mt-24 py-12 my-10">
+        <section id="experience" className="scroll-mt-24 py-12 my-10" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="mx-auto max-w-4xl px-5 py-10">
                 <h1 className="text-4xl font-bold pb-8 text-center text-white">
                     My <span className="text-amber-500">Experience</span>

@@ -87,10 +87,7 @@ const Navbar = () => {
               onClick={() => handleClick('home')}
               className="flex items-center gap-3 text-xl cursor-pointer"
             >
-              <p className="bg-amber-500 text-white shrink-0 rounded-full w-8 h-8 flex items-center justify-center">
-                S
-              </p>
-              <h1 className="text-2xl font-bold text-white">Shafi</h1>
+              <h1 className="text-2xl font-bold text-white"><span className="text-amber-500">~/</span>Shafi</h1>
             </a>
           </div>
 

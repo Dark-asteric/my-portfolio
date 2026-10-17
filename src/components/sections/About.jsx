@@ -1,8 +1,12 @@
 import profileImage from "../../assets/IMG_7926.jpg";
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const About = () => {
     return (
-        <section id="about" className="flex min-h-screen scroll-mt-5 pt-0 items-center">
+        <section id="about" className="flex min-h-screen scroll-mt-5 pt-0 items-center " data-aos="fade-up" data-aos-duration="1000">
             <div className="mx-auto w-full max-w-6xl px-5 py-12">
 
                 <div className="flex items-center gap-4 pb-4">

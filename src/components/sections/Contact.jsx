@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { Mail, MessageSquare, Send, User } from "lucide-react"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const EMAIL = "mishafi6969@gmail.com"
 
@@ -22,7 +25,8 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact" className="flex pt-0 pb-12 items-center scroll-mt-18 items-center">
+        <section id="contact" className="flex pt-0 pb-12 items-center scroll-mt-18 items-center" data-aos="fade-left" data-aos-easing="linear"
+            data-aos-duration="1100">
             <div className="mx-auto w-full max-w-3xl px-5 py-5">
                 <h1 className="pb-6 text-center text-3xl font-bold text-white sm:text-5xl">
                     Get In Touch -{" "}

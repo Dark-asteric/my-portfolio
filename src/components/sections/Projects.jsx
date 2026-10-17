@@ -1,4 +1,7 @@
-// Replace "#" with your real links. Leave `demo` out to hide the Live Demo button.
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 const projects = [
     {
         title: "SwapLine - Online Marketplace",
@@ -55,7 +58,9 @@ const ExternalLinkIcon = ({ size = 18 }) => (
 
 const Projects = () => {
     return (
-        <section id="projects" className="scroll-mt-24 pt-20 mt-10 py-12">
+        <section id="projects" className="scroll-mt-24 pt-20 mt-10 py-12" data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="mx-auto max-w-6xl px-5 py-10">
                 <h1 className="text-4xl font-bold pb-8 text-center text-white">
                     My <span className="text-amber-500">Projects</span>

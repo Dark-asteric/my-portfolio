@@ -1,9 +1,12 @@
 import { FileDown, MailPen } from "lucide-react";
 import TypeWriter from "../typewriter/TypeWriter";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const HeroSection = () => {
     return (
-        <section id="home" className="w-full min-h-screen pt-20 overflow-hidden mt-10">
+        <section id="home" className="w-full min-h-screen pt-20 overflow-hidden mt-10" data-aos="fade-up" data-aos-duration="1000">
             <div className="relative mx-auto max-w-6xl px-5 overflow-hidden bg-[var(--navy)] text-white">
                 <div className="relative z-[1] mx-auto grid min-h-[670px] w-full max-w-[1200px] grid-cols-1 items-center gap-10 px-5 py-12 sm:px-8 md:px-10 lg:grid-cols-[1.12fr_0.88fr] lg:gap-10 lg:px-8 xl:gap-[58px] xl:px-0">
                     <div className="min-w-0">

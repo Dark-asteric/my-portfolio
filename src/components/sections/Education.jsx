@@ -1,4 +1,7 @@
 import { CalendarDays, GraduationCap, MapPin } from "lucide-react"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const education = [
     {
@@ -22,7 +25,8 @@ const education = [
 
 const Education = () => {
     return (
-        <section id="education" className="scroll-mt-24 pt-20">
+        <section id="education" className="scroll-mt-24 pt-20" data-aos="fade-left" data-aos-easing="linear"
+            data-aos-duration="1200">
             <div className="mx-auto max-w-4xl px-5 py-10">
                 <h1 className="text-4xl font-bold pb-8 text-center text-white">
                     My <span className="text-amber-500">Education</span>

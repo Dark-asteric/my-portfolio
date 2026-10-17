@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { Code2 } from "lucide-react"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const icon = (name, file = `${name}-original`) =>
     `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${file}.svg`
@@ -47,7 +50,9 @@ const Skills = () => {
         filter === "All" ? skills : skills.filter((s) => s.category === filter)
 
     return (
-        <section id="skills" className="scroll-mt-24 pt-20">
+        <section id="skills" className="scroll-mt-24 pt-20" data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="mx-auto max-w-6xl px-5 py-10">
                 <h1 className="text-4xl text-center font-bold pb-6 text-white">
                     Technical <span className="text-amber-500">Skills</span>

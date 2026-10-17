@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { ArrowUpRight } from "lucide-react"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const GithubIcon = ({ size = 32 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -48,7 +51,8 @@ const stats = [
 
 const Profile = () => {
     return (
-        <section id="profiles" className="scroll-mt-24 mt-10 pt-29 min-h-screen">
+        <section id="profiles" className="scroll-mt-24 mt-10 pt-29 min-h-screen" data-aos="fade-down" data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className="mx-auto max-w-6xl px-5 py-10">
                 <h1 className="pb-8 text-center text-4xl font-bold text-white">
                     Coding <span className="text-amber-500">Profiles</span>
