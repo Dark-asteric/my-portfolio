@@ -58,8 +58,8 @@ I'm Shafi, a Web Developer and Computer Science student passionate about buildin
 
 ## 📬 Contact
 
-- **GitHub:** [Your GitHub Profile](<your-github-url>)
-- **LinkedIn:** [Your LinkedIn Profile](<your-linkedin-url>)
+- **GitHub:** [GitHub Profile](<https://github.com/Dark-asteric>)
+- **LinkedIn:** [LinkedIn Profile](<https://www.linkedin.com/in/muhammad-mi-shafi-4b2832172>)
 - **Email:** mishafi6969@gmail.com
 
 ---
