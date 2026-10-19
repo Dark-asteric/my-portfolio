@@ -19,14 +19,16 @@ const projects = [
         ],
     },
     {
-        title: "Student Records Management Application",
-        tag: "University project",
-        tech: ["C"],
-        github: "https://github.com/Dark-asteric/Student-academic-management-for-BUT-programs-with-C",
+        title: "Chicken Mood",
+        tag: "Personal project",
+        tech: ["React.js", "React Router", "Tailwind CSS", "DaisyUI", "Lucide-Icon"],
+        demo: "https://chicken-mood.vercel.app",
+        github: "https://github.com/Dark-asteric/Chicken-Mood",
         points: [
-            "Built an application that manipulates complex data structures (linked lists, dynamic arrays).",
-            "Implemented a grade calculation algorithm and a jury simulation (handling failures, withdrawals, and graduations).",
-            "Applied procedural programming principles.",
+            "Developed a responsive restaurant website showcasing a variety of chicken-based meals with an interactive menu and an appealing user interface.",
+            "Designed an online ordering form allowing customers to select dishes, specify quantities, and choose pickup or delivery.",
+            "Created reusable React components and implemented responsive layouts for desktop and mobile devices.",
+            "Focused on user-friendly navigation, accessibility, and an intuitive customer experience.",
         ],
     },
     {
@@ -40,6 +42,18 @@ const projects = [
             "Created an interactive guide explaining how to install and run Linux on a virtual machine.",
         ],
     },
+    {
+        title: "Student Records Management Application",
+        tag: "University project",
+        tech: ["C"],
+        github: "https://github.com/Dark-asteric/Student-academic-management-for-BUT-programs-with-C",
+        points: [
+            "Built an application that manipulates complex data structures (linked lists, dynamic arrays).",
+            "Implemented a grade calculation algorithm and a jury simulation (handling failures, withdrawals, and graduations).",
+            "Applied procedural programming principles.",
+        ],
+    },
+    
 ]
 
 const GithubIcon = ({ size = 18 }) => (
