@@ -11,7 +11,7 @@ import Skills from './sections/Skills'
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-clip">
       <Navbar />
       <HeroSection />
       <About />
@@ -22,7 +22,7 @@ const Home = () => {
       <Profiles />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 
